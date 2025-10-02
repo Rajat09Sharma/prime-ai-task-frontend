@@ -39,7 +39,7 @@ export const HomePage = () => {
     return (
         <>
             {!loading && notes?.length == 0 && <div className="w-11/12 my-6 mx-auto py-3 px-2 text-center space-y-5">
-                <h1 className="font-bold text-3xl">Create note easily.</h1>
+                <h1 className="font-bold text-3xl">Organize Your Thoughts with Easy Notes</h1>
                 <CreateNoteBtn />
             </div>}
 
