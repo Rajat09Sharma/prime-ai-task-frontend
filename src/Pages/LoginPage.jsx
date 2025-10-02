@@ -25,7 +25,7 @@ export const LoginPage = () => {
                 },
                 withCredentials: true
             });
-            // console.log("login response data", response.data);
+            console.log("login response data", response.data);
             dispatch(authAction.setAuthToken({ token: response.data.token, userId: response.data.userId }));
             navigate("/");
 
