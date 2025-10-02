@@ -17,7 +17,7 @@ export const EditNoteForm = ({ id, title, description }) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         setLoading(true);
-        setDeleteLoading(true);
+        // setDeleteLoading(false);
         const fd = new FormData(event.target);
         const data = Object.fromEntries(fd.entries());
         // console.log(data);
@@ -47,7 +47,7 @@ export const EditNoteForm = ({ id, title, description }) => {
         if (!confirmDelete) return;
 
         setDeleteError(true);
-        setLoading(true);
+        // setLoading(true);
         try {
             const response = await axiosPrivate.delete(`/note/${id}`, { withCredentials: true });
             // console.log("delete note response", response.data.message);
@@ -78,7 +78,7 @@ export const EditNoteForm = ({ id, title, description }) => {
                 </div>
                 <div className='text-right space-x-2'>
                     <button type='button' className='px-2 py-1 text-white rounded-md cursor-pointer transition-colors duration-200 ease-out bg-gray-400 hover:bg-gray-500' disabled={loading ? true : false} onClick={() => navigate("/")}>Cancel</button>
-                    <button type='submit' className='px-2 py-1 text-white rounded-md cursor-pointer transition-colors duration-200 ease-out bg-blue-700 hover:bg-blue-600' disabled={loading ? true : false}>{loading ? "Submitting" : "Submit"}</button>
+                    <button type='submit' className='px-2 py-1 text-white rounded-md cursor-pointer transition-colors duration-200 ease-out bg-blue-700 hover:bg-blue-600' disabled={loading ? true : false}>{loading ? "Submitting...." : "Submit"}</button>
                     <button type='button' className='px-2 py-1 text-white rounded-md cursor-pointer transition-colors duration-200 ease-out bg-red-700 hover:bg-red-600' disabled={deleteLoading ? true : false} onClick={handleDelete}>{deleteLoading ? "Deleting...." : "Delete"}</button>
                 </div>
             </form>

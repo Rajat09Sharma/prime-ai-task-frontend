@@ -6,7 +6,7 @@ import { authAction } from "./authSlice";
 export const userLogout = () => {
     return async (dispatch) => {
         try {
-            const response = await axios.post("/auth/logout", {}, { withCredentials: true });
+            const response = await axios.post("/auth/logout", {});
             console.log(response?.data?.message);
             
             if (response.status === 200) {
