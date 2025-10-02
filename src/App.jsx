@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { RootLayout } from "./Pages/RootLayout"
-import { AuthLayout } from "./Pages/authLayout"
+import { AuthLayout } from "./Pages/AuthLayout"
 import { LoginPage } from "./Pages/LoginPage"
 import { SignupPage } from "./Pages/SignupPage"
 import { HomePage } from "./Pages/HomePage"
