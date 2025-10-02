@@ -20,7 +20,7 @@ export const RootLayout = () => {
     useEffect(() => {
         const fetchRefreshToken = async () => {
             try {
-                const response = await axios.get("/auth/refresh");
+                const response = await axios.get("/auth/refresh", { withCredentials: true });
                 console.log("home refresh token", response.data);
                 dispatch(authAction.setAuthToken({ token: response.data.token, userId: response.data.userId }))
 
