@@ -20,7 +20,7 @@ export const EditNoteForm = ({ id, title, description }) => {
         setDeleteLoading(true);
         const fd = new FormData(event.target);
         const data = Object.fromEntries(fd.entries());
-        console.log(data);
+        // console.log(data);
 
         try {
 

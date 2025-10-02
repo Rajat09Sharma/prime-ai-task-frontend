@@ -16,7 +16,7 @@ export const LoginPage = () => {
         setLoading(true);
         const fd = new FormData(event.target);
         const data = Object.fromEntries(fd.entries());
-        console.log(data);
+        // console.log(data);
 
         try {
             const response = await axios.post("/auth/login", data, {

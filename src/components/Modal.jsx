@@ -30,7 +30,7 @@ export const Modal = () => {
 
         const fd = new FormData(event.target);
         const data = Object.fromEntries(fd.entries());
-        console.log(data);
+        // console.log(data);
 
         try {
             const response = await axiosPrivate.post("/note", data, {
