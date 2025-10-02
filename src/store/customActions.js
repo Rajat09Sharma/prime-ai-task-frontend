@@ -7,6 +7,8 @@ export const userLogout = () => {
     return async (dispatch) => {
         try {
             const response = await axios.post("/auth/logout", {}, { withCredentials: true });
+            console.log(response?.data?.message);
+            
             if (response.status === 200) {
                 dispatch(authAction.logout());
             }
